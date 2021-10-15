@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jogos">
         <activity
+            android:name=".activities.DetalhesActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.CreateActivity"
             android:exported="true" />
         <activity

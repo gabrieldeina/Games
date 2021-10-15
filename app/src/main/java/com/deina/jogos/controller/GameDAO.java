@@ -14,4 +14,10 @@ public class GameDAO {
     public Game getGame(int i) { return gamesList.get(i); }
 
     public List<Game> getGamesList() { return gamesList; }
+
+    public void editGame(int position, Game game){
+        gamesList.set(position, game);
+    }
+
+    public void remove(int position) { gamesList.remove(position); }
 }

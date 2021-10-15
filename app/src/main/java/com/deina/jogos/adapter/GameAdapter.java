@@ -1,6 +1,7 @@
 package com.deina.jogos.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.deina.jogos.R;
+import com.deina.jogos.activities.DetalhesActivity;
 import com.deina.jogos.controller.GameDAO;
 import com.deina.jogos.model.Game;
 
@@ -40,6 +42,12 @@ public class GameAdapter extends RecyclerView.Adapter {
         gameViewHolder.tvPublisher.setText(g.getPublisher());
         gameViewHolder.tvGenre.setText(g.getGenre());
         gameViewHolder.tvYear.setText(String.valueOf(g.getYear()));
+
+        gameViewHolder.btnDetails.setOnClickListener(v -> {
+            Intent detailsIntent = new Intent(context, DetalhesActivity.class);
+            detailsIntent.putExtra("position", position);
+            context.startActivity(detailsIntent);
+        });
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.deina.jogos.adapter;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ public class GameViewHolder extends RecyclerView.ViewHolder {
     TextView tvPublisher;
     TextView tvGenre;
     TextView tvYear;
+    Button btnDetails;
 
     public GameViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -22,5 +24,6 @@ public class GameViewHolder extends RecyclerView.ViewHolder {
         tvPublisher = itemView.findViewById(R.id.tvPublisher);
         tvGenre = itemView.findViewById(R.id.tvGenre);
         tvYear = itemView.findViewById(R.id.tvYear);
+        btnDetails = itemView.findViewById(R.id.btnDetails);
     }
 }
